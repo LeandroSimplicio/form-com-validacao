@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Criar conta</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Criar conta</h2>
+      <form>
+        <div class="form-grid">
+          <div class="input-group has-icon">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Primeiro nome"
+              required
+            />
+            <i class="fa fa-user"></i>
+          </div>
+
+          <div class="input-group has-icon">
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Segundo nome"
+              required
+            />
+            <i class="fa fa-user"></i>
+          </div>
+
+          <div class="input-group">
+            <input type="date" id="birthDate" name="birthDate" required />
+            <!-- Sem ícone -->
+          </div>
+
+          <div class="input-group has-icon">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+            <i class="fa fa-envelope"></i>
+          </div>
+
+          <div class="input-group has-toggle-icon">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Senha"
+              required
+            />
+            <i class="fa fa-eye toggle-password" toggle="#password"></i>
+          </div>
+
+          <div class="input-group has-toggle-icon">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirme a senha"
+              required
+            />
+            <i class="fa fa-eye toggle-password" toggle="#confirmPassword"></i>
+          </div>
+        </div>
+
+        <div class="gender-options full-width">
+          <label>Gênero:</label><br />
+          <label
+            ><input type="radio" name="gender" value="Feminino" required />
+            Feminino</label
+          >
+          <label
+            ><input type="radio" name="gender" value="Masculino" />
+            Masculino</label
+          >
+          <label
+            ><input type="radio" name="gender" value="Outro" /> Outro</label
+          >
+        </div>
+
+        <button type="submit">Criar conta</button>
+      </form>
+    </div>
+
+    <script src="src/Javascript/script.js"></script>
+  </body>
+</html>

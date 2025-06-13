@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #6366f1;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      height: 450px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px 10px 10px 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    /* Inputs com ícone têm padding extra à direita */
+    .input-group.has-icon input {
+      padding-right: 35px;
+    }
+
+    /* Para inputs com ícone clicável (olho), deixar cursor pointer no ícone */
+    .input-group.has-toggle-icon input {
+      padding-right: 40px; /* mais espaço para o ícone de toggle */
+    }
+
+    .input-group i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      pointer-events: none;
+    }
+
+    /* Ícone de olho precisa poder ser clicado */
+    .input-group .toggle-password {
+      pointer-events: auto;
+      cursor: pointer;
+      right: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    .gender-options {
+      margin: 30px 20px;
+    }
+
+    .gender-options label {
+      margin-right: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #4f46e5;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .full-width {
+        grid-column: span 1;
+      }
+      .gender-options {
+        margin: 15px 0;
+      }
+      .gender-options label {
+        margin-right: 10px;
+      }
+      button {
+        margin-top: 15px;
+      }
+      .form-container {
+        padding: 20px;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      .input-group input {
+        font-size: 0.9rem;
+      }
+      .input-group i {
+        font-size: 1.2rem;
+      }
+      .input-group.has-icon input {
+        padding-right: 30px;
+      }
+      .input-group.has-toggle-icon input {
+        padding-right: 35px;
+      }
+      .input-group.has-toggle-icon .toggle-password {
+        right: 5px;
+      }
+      .input-group.has-toggle-icon .toggle-password i {
+        font-size: 1.2rem;
+      }
+      .input-group.has-toggle-icon input {
+        padding-right: 40px;
+      }
+      .input-group.has-toggle-icon .toggle-password {
+        right: 5px;
+      }
+      .form-container {
+        height: auto; /* Ajusta a altura para conteúdo dinâmico */
+      }
+        
+    }
